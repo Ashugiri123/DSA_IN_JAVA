@@ -89,12 +89,12 @@ public class Implementation {
 
 
     public static void main(String[] args) {
-        Node a = new Node(3);
-        Node b = new Node(4);
-        Node c = new Node(5);
-        Node d = new Node(6);
-        Node e = new Node(7);
-        Node f = new Node(-1);
+        Node a = new Node(5);
+        Node b = new Node(3);
+        Node c = new Node(7);
+        Node d = new Node(2);
+        Node e = new Node(4);
+        Node f = new Node(6);
         Node g = new Node(9);
 
         a.left = b;
@@ -103,6 +103,8 @@ public class Implementation {
         b.right = e;
         c.left = f;
         c.right = g;
+
+        Node root = a;
 
         display(a);
         System.out.println();
@@ -131,5 +133,25 @@ public class Implementation {
         ArrayList<String> arr2= obj.binaryTreePaths(ConstructedTree);
         System.out.println(arr2);
 
+
+        MaximumSumBSTinBinaryTree MAXI = new MaximumSumBSTinBinaryTree();
+        System.out.println(MAXI.maxSumBST(root));
+
+
+
+        BSTtoGreaterTree obj2 = new BSTtoGreaterTree();
+        Node BtoG= obj2.convertBST(root);
+        BinaryTreePaths obj3 =new BinaryTreePaths();
+        ArrayList<String> arr3= obj3.binaryTreePaths(BtoG);
+        System.out.println(arr3);
+
+
+        int[] use = {1,2,3,4,5};
+
+        SortedArrayToBST SATBst = new SortedArrayToBST();
+
+        Node Sat = SATBst.sortedArrayToBST(use);
+
+        display(Sat);
     }
 }

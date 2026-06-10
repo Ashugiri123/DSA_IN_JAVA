@@ -3,7 +3,7 @@ package BinaryTrees;
 import java.util.*;
 
 
-class Node {
+ class Node {
     int val;
     Node left;
     Node right;

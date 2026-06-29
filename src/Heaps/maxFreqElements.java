@@ -13,7 +13,7 @@ class Pair implements Comparable<Pair>{
     }
     public int compareTo(Pair d){
         if(this.freq == d.freq){
-            return this.freq - d.freq;
+            return this.val - d.val;
         }
         return (this.freq - d.freq);
     }
